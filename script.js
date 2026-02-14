@@ -197,24 +197,6 @@ if (i >= j) {
   console.log(true);
 }*/
 
-arr = [2, 3, 4, 7, 11, 15];
-target = 9;
-i = 0;
-j = arr.length - 1;
-found = false;
-while (i < j) {
-  sum = arr[i] + arr[j];
-  if (sum === target) {
-    found = true;
-    break;
-  } else if (sum < target) {
-    i++;
-  } else {
-    j--;
-  }
-}
-console.log(found);
-
 /*arr = [0, 0, 1, 0, 3, 12];
 i = 0;
 for (j = 1; j < arr.length; j++) {
@@ -252,3 +234,35 @@ while (i < j) {
   j--;
 }
 console.log(arr);*/
+//1.sum of target
+arr = [2, 3, 4, 7, 11, 15];
+target = 9;
+i = 0;
+j = arr.length - 1;
+found = false;
+while (i < j) {
+  sum = arr[i] + arr[j];
+  if (sum === target) {
+    found = true;
+    break;
+  } else if (sum < target) {
+    i++;
+  } else {
+    j--;
+  }
+}
+console.log(found);
+//2.move zeros
+arr = [0, 0, 1, 0, 3, 12];
+i = 0;
+for (j = 1; j < arr.length; j++) {
+  if (arr[j] !== 0) {
+    arr[i] = arr[j];
+    i++;
+  }
+}
+while (i < arr.length) {
+  arr[i] = 0;
+  i++;
+}
+console.log(arr.slice(0, i + 1));
