@@ -234,7 +234,7 @@ while (i < j) {
   j--;
 }
 console.log(arr);*/
-//1.sum of target
+/*//1.sum of target
 arr = [2, 3, 4, 7, 11, 15];
 target = 9;
 i = 0;
@@ -264,5 +264,15 @@ for (j = 1; j < arr.length; j++) {
 while (i < arr.length) {
   arr[i] = 0;
   i++;
+}
+console.log(arr.slice(0, i + 1));*/
+//3.Remove duplicates in array
+arr = [1, 1, 1, 2, 2, 3];
+i = 0;
+for (j = 1; j < arr.length; j++) {
+  if (arr[j] !== arr[i]) {
+    i++;
+    arr[i] = arr[j];
+  }
 }
 console.log(arr.slice(0, i + 1));
