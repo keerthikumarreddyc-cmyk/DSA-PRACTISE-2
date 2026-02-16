@@ -265,7 +265,7 @@ while (i < arr.length) {
   arr[i] = 0;
   i++;
 }
-console.log(arr.slice(0, i + 1));*/
+console.log(arr.slice(0, i + 1));
 //3.Remove duplicates in array
 arr = [1, 1, 1, 2, 2, 3];
 i = 0;
@@ -275,4 +275,15 @@ for (j = 1; j < arr.length; j++) {
     arr[i] = arr[j];
   }
 }
-console.log(arr.slice(0, i + 1));
+console.log(arr.slice(0, i + 1));*/
+
+//REMOVE ELEMENT
+arr = [3, 3, 2, 2, 3];
+val = 3;
+i = 0;
+for (j = 0; j < arr.length; j++)
+  if (arr[j] !== val) {
+    arr[i] = arr[j];
+    i++;
+  }
+console.log(arr.slice(0, i));
