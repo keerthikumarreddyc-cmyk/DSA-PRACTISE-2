@@ -275,7 +275,7 @@ for (j = 1; j < arr.length; j++) {
     arr[i] = arr[j];
   }
 }
-console.log(arr.slice(0, i + 1));*/
+console.log(arr.slice(0, i + 1));
 
 //REMOVE ELEMENT
 arr = [3, 3, 2, 2, 3];
@@ -286,4 +286,27 @@ for (j = 0; j < arr.length; j++)
     arr[i] = arr[j];
     i++;
   }
-console.log(arr.slice(0, i));
+console.log(arr.slice(0, i));*/
+a = [1, 3, 6];
+b = [2, 4, 5];
+i = 0;
+j = 0;
+result = [];
+while (i < a.length && j < b.length) {
+  if (a[i] < b[j]) {
+    result.push(a[i]);
+    i++;
+  } else if (a[i] > b[j]) {
+    result.push(b[j]);
+    j++;
+  }
+}
+while (i < a.length) {
+  result.push(a[i]);
+  i++;
+}
+while (i < b.length) {
+  result.push(b[j]);
+  j++;
+}
+console.log(result);
