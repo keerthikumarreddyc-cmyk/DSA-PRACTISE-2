@@ -286,7 +286,7 @@ for (j = 0; j < arr.length; j++)
     arr[i] = arr[j];
     i++;
   }
-console.log(arr.slice(0, i));*/
+console.log(arr.slice(0, i));
 a = [1, 3, 6];
 b = [2, 4, 5];
 i = 0;
@@ -309,4 +309,21 @@ while (i < b.length) {
   result.push(b[j]);
   j++;
 }
-console.log(result);
+console.log(result);*/
+
+nums = [-7, -3, 2, 3, 11];
+i = 0;
+j = nums.length - 1;
+k = nums.length - 1;
+temp = [];
+while (i <= j) {
+  if (Math.abs(nums[i]) > Math.abs(nums[j])) {
+    temp[k] = nums[i] * nums[i];
+    i++;
+  } else {
+    temp[k] = nums[j] * nums[j];
+    j--;
+  }
+  k--;
+}
+console.log(temp);
