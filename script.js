@@ -309,7 +309,7 @@ while (i < b.length) {
   result.push(b[j]);
   j++;
 }
-console.log(result);*/
+console.log(result);
 
 nums = [-7, -3, 2, 3, 11];
 i = 0;
@@ -326,4 +326,19 @@ while (i <= j) {
   }
   k--;
 }
-console.log(temp);
+console.log(temp);*/
+//PALINDROME CHECK
+s = "racecar";
+i = 0;
+j = s.length - 1;
+while (i < j) {
+  if (s[i] !== s[j]) {
+    console.log(false);
+    break;
+  }
+  i++;
+  j--;
+}
+if (i >= j) {
+  console.log(true);
+}
