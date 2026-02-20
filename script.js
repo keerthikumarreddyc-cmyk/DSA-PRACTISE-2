@@ -326,7 +326,7 @@ while (i <= j) {
   }
   k--;
 }
-console.log(temp);*/
+console.log(temp);
 //PALINDROME CHECK
 s = "racecar";
 i = 0;
@@ -341,4 +341,21 @@ while (i < j) {
 }
 if (i >= j) {
   console.log(true);
+}*/
+//CONTAINER WITH MOST WATER
+heights = [1, 3, 2, 5, 25, 24, 5];
+i = 0;
+j = heights.length - 1;
+max = 0;
+while (i < j) {
+  area = Math.min(heights[i], heights[j]) * (j - i);
+  if (area > max) {
+    max = area;
+  }
+  if (heights[i] < heights[j]) {
+    i++;
+  } else {
+    j--;
+  }
 }
+console.log(max);
