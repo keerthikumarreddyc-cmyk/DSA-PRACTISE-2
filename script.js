@@ -341,7 +341,7 @@ while (i < j) {
 }
 if (i >= j) {
   console.log(true);
-}*/
+}
 //CONTAINER WITH MOST WATER
 heights = [1, 3, 2, 5, 25, 24, 5];
 i = 0;
@@ -358,4 +358,12 @@ while (i < j) {
     j--;
   }
 }
-console.log(max);
+console.log(max);*/
+// Reverse word in a sentence
+s = "the sky is blue";
+word = s.split(" ");
+result = [];
+for (i = word.length - 1; i >= 0; i--) {
+  result.push(word[i]);
+}
+console.log(result.join(" "));
