@@ -358,7 +358,7 @@ while (i < j) {
     j--;
   }
 }
-console.log(max);*/
+console.log(max);
 // Reverse word in a sentence
 s = "the sky is blue";
 word = s.split(" ");
@@ -366,4 +366,16 @@ result = [];
 for (i = word.length - 1; i >= 0; i--) {
   result.push(word[i]);
 }
-console.log(result.join(" "));
+console.log(result.join(" "));*/
+
+//dupicate 2
+nums = [0, 0, 0, 1, 1, 1, 2, 2, 3];
+i = 2;
+for (j = 2; j < nums.length; j++) {
+  if (nums[j] !== nums[i - 2]) {
+    nums[i] = nums[j];
+    i++;
+  }
+}
+console.log(nums.slice(0, i));
+console.log(i);
