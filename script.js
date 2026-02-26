@@ -366,7 +366,7 @@ result = [];
 for (i = word.length - 1; i >= 0; i--) {
   result.push(word[i]);
 }
-console.log(result.join(" "));*/
+console.log(result.join(" "));
 
 //dupicate 2
 nums = [0, 0, 0, 1, 1, 1, 2, 2, 3];
@@ -378,4 +378,37 @@ for (j = 2; j < nums.length; j++) {
   }
 }
 console.log(nums.slice(0, i));
-console.log(i);
+console.log(i);*/
+
+s = "babad";
+
+start = 0;
+maxLen = 1;
+
+for (i = 0; i < s.length; i++) {
+  // odd length palindrome
+  l = i;
+  r = i;
+  while (l >= 0 && r < s.length && s[l] === s[r]) {
+    if (r - l + 1 > maxLen) {
+      start = l;
+      maxLen = r - l + 1;
+    }
+    l--;
+    r++;
+  }
+
+  // even length palindrome
+  l = i;
+  r = i + 1;
+  while (l >= 0 && r < s.length && s[l] === s[r]) {
+    if (r - l + 1 > maxLen) {
+      start = l;
+      maxLen = r - l + 1;
+    }
+    l--;
+    r++;
+  }
+}
+
+console.log(s.substring(start, start + maxLen));
