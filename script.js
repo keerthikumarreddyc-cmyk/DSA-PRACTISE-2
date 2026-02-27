@@ -378,7 +378,7 @@ for (j = 2; j < nums.length; j++) {
   }
 }
 console.log(nums.slice(0, i));
-console.log(i);*/
+console.log(i);
 
 s = "babad";
 
@@ -396,19 +396,27 @@ for (i = 0; i < s.length; i++) {
     }
     l--;
     r++;
-  }
+  }*/
 
-  // even length palindrome
-  l = i;
-  r = i + 1;
-  while (l >= 0 && r < s.length && s[l] === s[r]) {
-    if (r - l + 1 > maxLen) {
-      start = l;
-      maxLen = r - l + 1;
-    }
-    l--;
-    r++;
+nums = [2, 3, 1, 2, 4, 3];
+target = 7;
+
+left = 0;
+sum = 0;
+minLen = Infinity;
+
+for (right = 0; right < nums.length; right++) {
+  sum += nums[right];
+
+  while (sum >= target) {
+    minLen = Math.min(minLen, right - left + 1);
+    sum -= nums[left];
+    left++;
   }
 }
 
-console.log(s.substring(start, start + maxLen));
+if (minLen === Infinity) {
+  console.log(0);
+} else {
+  console.log(minLen);
+}
