@@ -396,7 +396,7 @@ for (i = 0; i < s.length; i++) {
     }
     l--;
     r++;
-  }*/
+  }
 
 nums = [2, 3, 1, 2, 4, 3];
 target = 7;
@@ -420,3 +420,22 @@ if (minLen === Infinity) {
 } else {
   console.log(minLen);
 }
+*/
+
+s = "abcabcbb";
+
+left = 0;
+maxLen = 0;
+
+for (right = 0; right < s.length; right++) {
+  for (k = left; k < right; k++) {
+    if (s[k] === s[right]) {
+      left = k + 1;
+      break;
+    }
+  }
+
+  maxLen = Math.max(maxLen, right - left + 1);
+}
+
+console.log(maxLen);
