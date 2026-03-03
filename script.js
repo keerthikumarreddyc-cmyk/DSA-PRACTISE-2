@@ -420,7 +420,7 @@ if (minLen === Infinity) {
 } else {
   console.log(minLen);
 }
-*/
+
 
 s = "abcabcbb";
 
@@ -475,4 +475,23 @@ for (i = 0; i < nums.length - 3; i++) {
   }
 }
 
-console.log(result);
+console.log(result);*/
+people = [3, 2, 2, 1];
+limit = 3;
+
+people.sort((a, b) => a - b);
+
+left = 0;
+right = people.length - 1;
+boats = 0;
+
+while (left <= right) {
+  if (people[left] + people[right] <= limit) {
+    left++;
+  }
+
+  right--;
+  boats++;
+}
+
+console.log(boats);
