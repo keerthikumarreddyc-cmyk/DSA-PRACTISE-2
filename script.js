@@ -475,7 +475,7 @@ for (i = 0; i < nums.length - 3; i++) {
   }
 }
 
-console.log(result);*/
+console.log(result);
 people = [3, 2, 2, 1];
 limit = 3;
 
@@ -494,4 +494,24 @@ while (left <= right) {
   boats++;
 }
 
-console.log(boats);
+console.log(boats);*/
+
+nums = [1, 12, -5, -6, 50, 3];
+k = 4;
+
+sum = 0;
+
+// first window
+for (i = 0; i < k; i++) {
+  sum += nums[i];
+}
+
+maxSum = sum;
+
+// slide the window
+for (j = k; j < nums.length; j++) {
+  sum = sum + nums[j] - nums[j - k];
+  maxSum = Math.max(maxSum, sum);
+}
+
+console.log(maxSum / k);
