@@ -494,7 +494,7 @@ while (left <= right) {
   boats++;
 }
 
-console.log(boats);*/
+console.log(boats);
 
 nums = [1, 12, -5, -6, 50, 3];
 k = 4;
@@ -514,4 +514,22 @@ for (j = k; j < nums.length; j++) {
   maxSum = Math.max(maxSum, sum);
 }
 
-console.log(maxSum / k);
+console.log(maxSum / k);*/
+nums = [1, 2, 3];
+k = 3;
+
+count = 0;
+
+for (i = 0; i < nums.length; i++) {
+  sum = 0;
+
+  for (j = i; j < nums.length; j++) {
+    sum += nums[j];
+
+    if (sum === k) {
+      count++;
+    }
+  }
+}
+
+console.log(count);
