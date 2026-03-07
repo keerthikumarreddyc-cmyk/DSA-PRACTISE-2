@@ -514,7 +514,7 @@ for (j = k; j < nums.length; j++) {
   maxSum = Math.max(maxSum, sum);
 }
 
-console.log(maxSum / k);*/
+console.log(maxSum / k);
 nums = [1, 2, 3];
 k = 3;
 
@@ -532,4 +532,24 @@ for (i = 0; i < nums.length; i++) {
   }
 }
 
-console.log(count);
+console.log(count);*/
+
+nums = [2, 1, 5, 1, 3, 2];
+k = 3;
+
+sum = 0;
+
+// first window
+for (i = 0; i < k; i++) {
+  sum += nums[i];
+}
+
+maxSum = sum;
+
+// slide window
+for (j = k; j < nums.length; j++) {
+  sum = sum + nums[j] - nums[j - k];
+  maxSum = Math.max(maxSum, sum);
+}
+
+console.log(maxSum);
